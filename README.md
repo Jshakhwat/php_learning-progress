@@ -1,2 +1,2 @@
-# php_learning-progress
-# the project is all about learning
+# php_learning-progress.
+# this repo is all about learning.
