@@ -25,14 +25,14 @@
             // $glob = "I am a global variable";
             // echo "$glob";
 //problem1:
-            // $a = 10;
-            // $b = 20;
-            // $a = $a + $b;
-            // $b = $a - $b;
-            // $a = $b 
+            $a = 30;
+            $b = 60;
+            $a = $a + $b;
+            $b = $a - $b;
+            $a = $a - $b;
             
-            // echo "The value of 'a' is: ".$a."<br>";
-            // echo "The value of 'b' is: ".$b."<br>";
+            echo "The value of 'a' is: ".$a."<br>";
+            echo "The value of 'b' is: ".$b."<br>";
            
             
 // problem2:
@@ -229,12 +229,12 @@
 // problem2
 
 
-for ($i = 1; $i < 10; $i++){
-    echo $i."<br>";
-}
-for ($i = 10; $i > 0; $i--){
-    echo $i."<br>";
-}
+// for ($i = 1; $i < 10; $i++){
+//     echo $i."<br>";
+// }
+// for ($i = 10; $i > 0; $i--){
+//     echo $i."<br>";
+// }
 
 
  ?>
