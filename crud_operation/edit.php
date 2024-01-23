@@ -1,14 +1,31 @@
 <?php
-if($_GET['id']){
+// if($_GET['id']){
 
-    include 'connection.php';
-    $catch = $_GET['id'];
-    $sql = "SELECT*FROM form WHERE id = $catch";
-    $result = mysqli_query($conn,$sql);
+//     include 'connection.php';
+//     $catch = $_GET['id'];
+//     $sql = "SELECT*FROM form WHERE id = $catch";
+//     $result = mysqli_query($conn,$sql);
     
-    $fetch = $result->fetch_assoc();
+//     $fetch = $result->fetch_assoc();
+//     // echo $fetch['user_name'];
+// }
+include 'connection.php';
+$catch = $_GET['id'];
+
+if($catch){
+    $sql = "SELECT*FROM form WHERE id = $catch";
+    $query = mysqli_query($conn, $sql);
+    $fetch = $query -> fetch_assoc();
+    // echo '<pre>';
+    // print_r ($fetch);
     // echo $fetch['user_name'];
+
 }
+
+
+
+
+
 
 ?>
 <!DOCTYPE html>
@@ -82,15 +99,16 @@ if($_GET['id']){
 <body>
   
 
-    <form action="" method="post">
+    <form action="update.php" method="post">
+        <input type="hidden" name="user_id" value = "<?php echo $fetch['id']?>">
         <label for="username">User Name:</label>
         <input type="text" id="username" name="username" value="<?php echo $fetch['user_name']?>">
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="<?php echo $fetch['email']?>" required>
+        <input type="email" id="email" name="email" value="<?php echo $fetch['email']?>">
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" value="<?php echo $fetch['pass']?>" >
+        <input type="password" id="password" name="password" value="<?php echo $fetch['pass']?>">
 
         <button>update</button>
     </form>

@@ -68,6 +68,7 @@
     
 
     <form action="insert.php" method="post">
+        
         <label for="username">User Name:</label>
         <input type="text" id="username" name="username" required>
 

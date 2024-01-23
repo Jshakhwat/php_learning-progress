@@ -57,7 +57,7 @@ $arr = $result->fetch_all(MYSQLI_ASSOC);
                     <td><?php echo $data['pass'] ?></td>
                     <td class="button-column">
                        <a href="http://localhost/php/crud_operation/edit.php?id=<?=$data['id']?>"><button>Edit</button></a> 
-                        <button>Delete</button>
+                        <a href="delete.php"><button>Delete</button></a>
                         <button>Create</button>
                     </td>
                 </tr>
